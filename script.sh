@@ -27,5 +27,12 @@ echo "======= Export Done ======"
 . build/envsetup.sh
 echo "====== Envsetup Done ======="
 
-#build
-lunch lineage_spes-user && make installclean && m bacon
+# Check keys before procced build
+if [ -d "vendor/extra" ]; then
+    echo "✓ Keys found for sign build. Proceeding..."
+    lunch lineage_spes-user && make installclean && m bacon
+else
+    echo "✗ Error: keys not found Directory 'vendor/extra'."
+    echo "Stopping script execution."
+    exit 1
+fi
