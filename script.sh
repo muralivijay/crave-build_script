@@ -7,7 +7,7 @@ echo "Repo init success"
 echo "=================="
 
 #local_manifest
-git clone https://github.com/muralivijay/crave-local_manifest/local_manifests.git -b 13.0 .repo/local_manifests
+git clone https://github.com/muralivijay/crave-local_manifest.git -b 13.0 .repo/local_manifests
 echo "============================"
 echo "Local manifest clone success"
 echo "============================"
