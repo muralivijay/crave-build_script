@@ -29,8 +29,8 @@ echo "====== Envsetup Done ======="
 
 # Check keys before procced build
 if [ -d "vendor/extra" ]; then
-    echo "✓ Keys found for sign build. Proceeding..."
-    lunch lineage_spes-user && make installclean && m bacon
+    echo "✓ Keys found for sign build. Proceeding build..."
+    lunch lineage_spes-user && mka clean && mka clobber && mka bacon
 else
     echo "✗ Error: keys not found Directory 'vendor/extra'."
     echo "Stopping script execution."
